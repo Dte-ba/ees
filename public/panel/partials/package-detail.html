@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="page-header">
+    <h1>
+      {{tangible.content.title}}
+    </h1>
+    <ul class="category-list">
+      <li ng-repeat="category in tangible.content.category">
+        <a href="#/packages?filter={{category}}"><small>{{category}}</small></a>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 text-center">
+      <img ng-src="/package/?uid={{tangible.uid}}&asset=content" alt="" class="img-responsive">
+    </div>
+    <div class="col-sm-6">
+      <h3>Ficha Técnica</h3>
+      <p>{{tangible.content.content}}</p>
+
+      <div class="text-right">
+        <a class="btn btn-default" href="/package?content={{tangible.uid}}" target="_blank" 
+          >Acceder al Tangible <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
